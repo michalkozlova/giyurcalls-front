@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Statistics</title>
+
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+
+    <link rel="stylesheet" href="css/statistics.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-dark bg-primary">
+            <span class="text-light py-2 h2">Statistics</span>
+        </nav>
+
+
+        <div id="pickDate">
+
+            <div class="container m-4">
+                <input type="text" class="start" aria-label="test">
+                <input type="text" class="end">
+                <br>
+                <input type="checkbox" id="newCustomerCheck" class="m-3">לידים חדשים
+                <br>
+                <button type="button" id="setDates" class="btn btn-outline-secondary m-2">Update</button>
+            </div>
+
+
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+            <li class="nav-item">
+                <a class="nav-link active" id="calls-tab" data-toggle="tab" href="#calls" role="tab" aria-controls="calls" aria-selected="true">Calls</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="meetings-tab" data-toggle="tab" href="#meetings" role="tab" aria-controls="meetings" aria-selected="false">Meetings</a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="calls" role="tabpanel" aria-labelledby="calls-tab">
+
+                      <table class="table table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">בתהליך</th>
+                            <th scope="col">לא בתהליך</th>
+                            <th scope="col">לא מתגיירים</th>
+                            <th scope="col">אין מענה</th>
+                            <th scope="col">סה"כ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Tamar</th>
+                            <td id="tamarMeta0">-</td>
+                            <td id="tamarMeta1">-</td>
+                            <td id="tamarMeta2">-</td>
+                            <td id="tamarMeta3">-</td>
+                            <td id="tamarMeta4">-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Dana</th>
+                            <td id="danaMeta0">-</td>
+                            <td id="danaMeta1">-</td>
+                            <td id="danaMeta2">-</td>
+                            <td id="danaMeta3">-</td>
+                            <td id="danaMeta4">-</td>
+                          </tr>
+                          <tr class="table-warning">
+                            <th scope="row">All</th>
+                            <td id="allMeta0">-</td>
+                            <td id="allMeta1">-</td>
+                            <td id="allMeta2">-</td>
+                            <td id="allMeta3">-</td>
+                            <td id="allMeta4">-</td>
+                          </tr>
+                          <tr class="table-info">
+                            <th scope="row">%</th>
+                            <td id="perMeta0">-</td>
+                            <td id="perMeta1">-</td>
+                            <td id="perMeta2">-</td>
+                            <td id="perMeta3">-</td>
+                            <td>100%</td>
+                          </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>All Statuses</h2>
+
+                      <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">לא עונה 1</th>
+                              <th scope="col">לא עונה 2</th>
+                              <th scope="col">מתלבטים</th>
+                              <th scope="col">נקבעה פגישה</th>
+                              <th scope="col">לא מעוניין</th>
+                              <th scope="col">לא מתייאשים</th>
+                              <th scope="col">לא רלוונטי</th>
+                              <th scope="col">סה"כ</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Tamar</th>
+                              <td id="tamar0">-</td>
+                              <td id="tamar1">-</td>
+                              <td id="tamar2">-</td>
+                              <td id="tamar3">-</td>
+                              <td id="tamar4">-</td>
+                              <td id="tamar5">-</td>
+                              <td id="tamar6">-</td>
+                              <td id="tamar7">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Dana</th>
+                              <td id="dana0">-</td>
+                              <td id="dana1">-</td>
+                              <td id="dana2">-</td>
+                              <td id="dana3">-</td>
+                              <td id="dana4">-</td>
+                              <td id="dana5">-</td>
+                              <td id="dana6">-</td>
+                              <td id="dana7">-</td>
+                            </tr>
+                            <tr class="table-warning">
+                              <th scope="row">All</th>
+                              <td id="all0">-</td>
+                              <td id="all1">-</td>
+                              <td id="all2">-</td>
+                              <td id="all3">-</td>
+                              <td id="all4">-</td>
+                              <td id="all5">-</td>
+                              <td id="all6">-</td>
+                              <td id="all7">-</td>
+                            </tr>
+                            <tr class="table-info">
+                              <th scope="row">%</th>
+                              <td id="per0">-</td>
+                              <td id="per1">-</td>
+                              <td id="per2">-</td>
+                              <td id="per3">-</td>
+                              <td id="per4">-</td>
+                              <td id="per5">-</td>
+                              <td id="per6">-</td>
+                              <td>100%</td>
+                            </tr>
+                          </tbody>
+                      </table>
+
+                      <h2>לא רלוונטי</h2>
+
+                      <table class="table table-sm w-75">
+                          <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">לא אזרח</th>
+                              <th scope="col">הכרה</th>
+                              <th scope="col">טעות</th>
+                              <th scope="col">משפטי</th>
+                              <th scope="col">חד מיניים</th>
+                              <th scope="col">הלכתי</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Tamar</th>
+                              <td id="tamarNotRel0">-</td>
+                              <td id="tamarNotRel1">-</td>
+                              <td id="tamarNotRel2">-</td>
+                              <td id="tamarNotRel3">-</td>
+                              <td id="tamarNotRel4">-</td>
+                              <td id="tamarNotRel5">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Dana</th>
+                              <td id="danaNotRel0">-</td>
+                              <td id="danaNotRel1">-</td>
+                              <td id="danaNotRel2">-</td>
+                              <td id="danaNotRel3">-</td>
+                              <td id="danaNotRel4">-</td>
+                              <td id="danaNotRel5">-</td>
+                            </tr>
+                            <tr class="table-warning">
+                              <th scope="row">All</th>
+                              <td id="allNotRel0">-</td>
+                              <td id="allNotRel1">-</td>
+                              <td id="allNotRel2">-</td>
+                              <td id="allNotRel3">-</td>
+                              <td id="allNotRel4">-</td>
+                              <td id="allNotRel5">-</td>
+                            </tr>
+                            <tr class="table-info">
+                              <th scope="row">%</th>
+                              <td id="perNotRel0">-</td>
+                              <td id="perNotRel1">-</td>
+                              <td id="perNotRel2">-</td>
+                              <td id="perNotRel3">-</td>
+                              <td id="perNotRel4">-</td>
+                              <td id="perNotRel5">-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <h2>WhatsApp</h2>
+
+                        <table class="table table-sm w-25">
+                          <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">נשלח</th>
+                              <th scope="col">התקבל</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Tamar</th>
+                              <td id="tamarWA0">-</td>
+                              <td id="tamarWA1">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Dana</th>
+                              <td id="danaWA0">-</td>
+                              <td id="danaWA1">-</td>
+                            </tr>
+                            <tr class="table-warning">
+                              <th scope="row">All</th>
+                              <td id="allWA0">-</td>
+                              <td id="allWA1">-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+          </div>
+
+
+          <div class="tab-pane fade" id="meetings" role="tabpanel" aria-labelledby="meetings-tab">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">City</th>
+                  <th scope="col">נקבע</th>
+                  <th scope="col">התקיים</th>
+                  <th scope="col">מבוגרים</th>
+                  <th scope="col">קטינים</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Ashdod</th>
+                  <td id="meetA0">-</td>
+                  <td id="meetA1">-</td>
+                  <td id="meetA2">-</td>
+                  <td id="meetA3">-</td>
+                </tr>
+                <tr>
+                  <th scope="row">Haifa</th>
+                  <td id="meetH0">-</td>
+                  <td id="meetH1">-</td>
+                  <td id="meetH2">-</td>
+                  <td id="meetH3">-</td>
+                </tr>
+                <tr>
+                  <th scope="row">Jerusalem</th>
+                  <td id="meetJ0">-</td>
+                  <td id="meetJ1">-</td>
+                  <td id="meetJ2">-</td>
+                  <td id="meetJ3">-</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tel Aviv</th>
+                  <td id="meetT0">-</td>
+                  <td id="meetT1">-</td>
+                  <td id="meetT2">-</td>
+                  <td id="meetT3">-</td>
+                </tr>
+                <tr class="table-warning">
+                  <th scope="row">All</th>
+                  <td id="allMeet0">-</td>
+                  <td id="allMeet1">-</td>
+                  <td id="allMeet2">-</td>
+                  <td id="allMeet3">-</td>
+                </tr>
+              </tbody>
+          </table>
+          </div>  
+
+
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+        crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="https://unpkg.com/js-datepicker"></script>
+
+    <script src="js/statistics.js"></script>
+</body>
+</html>

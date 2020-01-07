@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UserName</title>
+
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+        
+    <div class="container" style="height: 800px">
+        <nav class="navbar navbar-dark bg-primary">
+            <span class="text-light py-2 h2">UserName</span>
+        </nav>
+
+        <div class="h-70 row">
+            <div id="centerContainer" class="col-sm-9 d-flex justify-content-center align-items-center">
+                <button id="btnNewCall" class="h-25 w-50 btn btn-warning btn-lg btn-block mt-4 mb-4 rounded-pill">
+                    <span class="text-secondary">להוסיף שיחה</span>
+                </button>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="w-100 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-center">
+                            <p id="date" class="pt-4 pr-4 pl-4 font-weight-bold">date</p>
+                            <p class="pt-4 pr-4 pl-4 font-weight-bold">היום</p>
+                    </div>
+                    <ul class="w-100 list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type0" class="">-</span>
+                            לא עונה 1
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type1" class="">-</span>
+                            לא עונה 2
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type2" class="">-</span>
+                            מתלבטים
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type3" class="badge badge-primary badge-pill">-</span>
+                            נקבעה פגישה
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type4" class="">-</span>
+                            לא מעוניין 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type5" class="">-</span>
+                            לא מתייאשים 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type6" class="">-</span>
+                            לא רלוונטי - לא אזרח 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type7" class="">-</span>
+                            לא רלוונטי - הכרה 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type8" class="">-</span>
+                            לא רלוונטי - טעות 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type9" class="">-</span>
+                            לא רלוונטי - משפטי 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type10" class="">-</span>
+                            לא רלוונטי - חד מיניים 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-1">
+                            <span id="type11" class="">-</span>
+                            לא רלוונטי - הלכתי 
+                        </li>
+                        <li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center p-1">
+                            <span id="type12" class="badge badge-primary badge-pill">-</span>
+                            סה"כ 
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span id="whatsappCounter" class="btn btn-outline-success mt-2 mb-2">-</span>
+                        <button id="gotNewMessage" type="button" class="btn btn-success mt-2 mb-2">קיבלתי וואטסאפ</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <nav class="navbar navbar-light rounded-lg" style="background-color: #e3f2fd;">
+            <div class="w-100 d-flex flex-column">
+                <div class="d-flex justify-content-end font-weight-bold">
+                    <p class="pt-2 font-weight-bold">השבוע</p>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        סה"כ
+                        <span id="weekAll" align="center">-</span>
+                        <span id="percentAll" align="center">100%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        לא רלוונטי
+                        <span id="week6" align="center">-</span>
+                        <span id="percent6" align="center">%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        לא מתייאשים
+                        <span id="week5" align="center">-</span>
+                        <span id="percent5" align="center">%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        לא מעוניין
+                        <span id="week4" align="center">-</span>
+                        <span id="percent4" align="center">%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        נקבעה פגישה
+                        <span id="week3" align="center">-</span>
+                        <span id="percent3" align="center">%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        מתלבטים
+                        <span id="week2" align="center">-</span>
+                        <span id="percent2" align="center">%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        לא עונה 2
+                        <span id="week1" align="center">-</span>
+                        <span id="percent1" align="center">%</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center mr-4 ml-4">
+                        לא עונה 1
+                        <span id="week0" align="center">-</span>
+                        <span id="percent0" align="center">%</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+
+
+    <script>
+        const userID = 1
+    </script>
+    <script src="js/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous">
+    </script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+        crossorigin="anonymous">
+    </script>
+
+    <script src="js/my.js"></script>
+    
+</body>
+</html>
