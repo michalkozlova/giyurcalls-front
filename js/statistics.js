@@ -1,15 +1,18 @@
-const urlAllCalls = "http://3.16.89.108:3000/api/statistics/fullForDates"
-const urlNotRelevantCalls = "http://3.16.89.108:3000/api/statistics/notRelevantForDates"
-const urlWASentMessages = "http://3.16.89.108:3000/api/statistics/sentMessages"
-const urlWAReceivedMessages = "http://3.16.89.108:3000/api/statistics/receivedMessages"
+const urlAllCalls = "http://***/api/statistics/fullForDates"
+const urlNotRelevantCalls = "http://***/api/statistics/notRelevantForDates"
+const urlWASentMessages = "http://***/api/statistics/sentMessages"
+const urlWAReceivedMessages = "http://***/api/statistics/receivedMessages"
 
 
-const urlNewLeadsAllCalls = "http://3.16.89.108:3000/api/statistics/newForDates"
-const urlNewNotRelevantCalls = "http://3.16.89.108:3000/api/statistics/newNotRelevantForDates"
+const urlNewLeadsAllCalls = "http://***/api/statistics/newForDates"
+const urlNewNotRelevantCalls = "http://***/api/statistics/newNotRelevantForDates"
 
-const urlMeetings = "http://3.16.89.108:3000/api/meetings/getMeetingAmount"
+const urlMeetings = "http://***/api/meetings/getMeetingAmount"
 
-let fromDate = 1578175200000
+let severalTimeAgo = 1577570400000
+let oneWeek = 604800000
+let fromDate = severalTimeAgo + oneWeek*numberOfWeeks
+
 let toDate = Date.now()
 
 
